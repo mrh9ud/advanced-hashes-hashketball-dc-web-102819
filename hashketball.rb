@@ -255,6 +255,6 @@ def long_name_steals_a_ton?
       greatest_steals, highest_steals = each_player[:player_name], each_player[:steals] if each_player[:steals] > highest_steals
     end
   end
-  return true if greatest_steals == longest_named_player
+  return true if greatest_steals == player_with_longest_name
 end
 
