@@ -222,7 +222,7 @@ end
 def winning_team
   sum = 0
   winning_team = ''
-  game_hash.each do |home_away, keys|
+  game_hash.each do |location, team|
     team_points = 0
     team_name = game_hash[team][:team_name]
     team[:players].each do |player|
