@@ -206,13 +206,13 @@ end
 
 def most_points_scored
   max_points = 0
-  mvp = ''
+  best_player = ''
   game_hash.each do |location, team|
     team[:players].each do |player|
       points = player[:points]
-      if points > most_points
-        most_points = points
-        mvp = player[:player_name]
+      if points > max_points
+        max_points = points
+        best_player = player[:player_name]
       end
     end
   end
