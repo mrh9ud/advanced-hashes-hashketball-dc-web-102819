@@ -220,8 +220,8 @@ def most_points_scored
 end
 
 def winning_team
-  total_points = 0
-  win_team = ''
+  sum = 0
+  winning_team = ''
   game_hash.each do |home_away, keys|
     team_points = 0
     team_name = game_hash[home_away][:team_name]
@@ -229,7 +229,7 @@ def winning_team
       points = player[:points]
       team_points += points
     end
-    win_team, total_points = team_name, team_points if team_points > total_points
+    win_team, sum = team_name, team_points if team_points > sum
   end
   return win_team
 end
