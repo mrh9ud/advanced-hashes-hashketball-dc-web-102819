@@ -265,7 +265,6 @@ def long_name_steals_a_ton?
     team[:players].each do |player|
       greatest_steals, highest_steals = player[:player_name], player[:steals] if player[:steals] > highest_steals
     end
-    end
   end
   return true if greatest_steals == longest_named_player
 end
