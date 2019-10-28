@@ -258,13 +258,14 @@ def long_name_steals_a_ton?
   return true if steals_most == player_with_longest_name
 end
 
-#def long_name_steals_a_ton?
-#  greatest_steals = ''
-#  highest_steals = 0
-#  game_hash.each do |location, team|
-#    team[:players].each do |player|
-#      greatest_steals, highest_steals = player[:player_name], player[:steals] if player[:steals] > highest_steals
-#    end
-#  end
-#  return true if greatest_steals == longest_named_player
-#end
+def long_name_steals_a_ton?
+  greatest_steals = ''
+  highest_steals = 0
+  game_hash.each do |location, team|
+    team[:players].each do |player|
+      greatest_steals, highest_steals = player[:player_name], player[:steals] if player[:steals] > highest_steals
+    end
+    end
+  end
+  return true if greatest_steals == longest_named_player
+end
